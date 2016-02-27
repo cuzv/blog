@@ -1,132 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"
-  xmlns:content="http://purl.org/rss/1.0/modules/content/"
-  xmlns:dc="http://purl.org/dc/elements/1.1/"
-  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
-  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
-  <channel>
-    <title>Valar morghulis</title>
-    <link>https://github.com/cuzv</link>
-    <description>The night is dark and full of terrors.</description>
-    <pubDate>Fri, 07 Nov 2014 00:00:00 +0800</pubDate>
-    <item>
-      <title>iOS Tips</title>
-      <link>https://github.com/cuzv/iOS-Tips</link>
-      <description>- [转换对象](#转换对象)
-- [让 Category 支持添加属性与成员变量](#让-category-支持添加属性与成员变量)
-- [获取图片](#获取图片)
-- [通过颜色创建图片](#通过颜色创建图片)
-- [让 UILabel 具有 padding 效果](#让-uilabel-具有-padding-效果)
-- [让 UITextField 具有 padding 效果](#让-uitextfield-具有-padding-效果)
-- [方便快捷获取调整视图坐标与大小](#方便快捷获取调整视图坐标与大小)
-- [为视图添加边线](#为视图添加边线)
-- [寻找视图的控制器](#寻找视图的控制器)
-- [吐司框效果](#吐司框效果)
-- [徽标效果](#徽标效果)
-- [统计并限制输入长度](#统计并限制输入长度)
-- [禁用粘贴功能](#禁用粘贴功能)
-- [判断键盘是否已经升起](#判断键盘是否已经升起)
-- [GCD Timer](#cgd-timer)
-- [在 Storyboard Autolayout 模式下使用 UIScrollview](#在-storyboard-autolayout-模式下使用-uiscrollview)
-- [播放短暂的提示声音](#播放短暂的提示声音)
-- [设置textView或者label的行间距方法](#设置-textview-或者-label-的行间距方法)
-- [截屏](#截屏)
-- [手势在左右的边缘才触发](#手势在左右的边缘才触发)
-- [修改 UITabbar 高度](#修改-uitabbar-高度)
-- [自定义 UITabbar 图片](#自定义-uitabbar-图片)
-- [UITableViewCell 高度计算](#uitableviewcell-高度计算)
+---
+layout: post
+title: linux(centos) Terminal Command 学习笔记
+tag: linux
+categories: 'moch'
+---
 
-</description>
-      <pubDate>Fri, 07 Nov 2014 00:00:00 +0800</pubDate>
-      <dc:date>2014-11-07T00:00:00+08:00</dc:date>
-    </item>
-    <item>
-      <title>The Swift Programming Language Noteworthy</title>
-      <link>https://github.com/cuzv/Swift-Programming-Language-Noteworthy</link>
-      <description>- [The Basics](#the-basics)
-- [Basic Operators](#basic-operators)
-- [Strings and Characters](#strings-and-characters)
-- [Collection Types](#collection-types)
-- [Control Flow](#control-flow)
-- [Functions](#functions)
-- [Closures](#closures)
-- [Enumerations](#enumerations)
-- [Classes and Structures](#classes-and-structures)
-- [Properties](#properties)
-- [Methods](#methods)
-- [Subscripts](#subscripts)
-- [Inheritance](#inheritance)
-- [Initialization](#initialization)
-- [Deinitialization](#deinitialization)
-- [Automatic Reference Counting](#automatic-reference-counting)
-- [Optional Chaining](#optional-chaining)
-- [Type Casting](#type-casting)
-- [Nested Types](#nested-types)
-- [Extensions](#extensions)
-- [Protocols](#protocols)
-- [Generics](#generics)
-
-</description>
-      <pubDate>Sat, 11 Oct 2014 00:00:00 +0800</pubDate>
-      <dc:date>2014-10-11T00:00:00+08:00</dc:date>
-    </item>
-    <item>
-      <title>Swift 1 学习笔记</title>
-      <link>https://github.com/cuzv/Swift-Issues</link>
-      <description>- [字符串是值类型](#字符串是值类型)
-- [结构体和枚举是值类型](#结构体和枚举是值类型)
-- [类和结构体的选择](#类和结构体的选择)
-- [集合类型(Collection)的赋值和拷贝行为](#集合类型的赋值和拷贝行为)
-- [属性](#属性)
-- [构造过程](#构造过程)
-- [自动引用计数](#自动引用计数)
-- [扩展](#扩展)
-- [协议](#协议)
-- [幽灵一般的Optional](#幽灵一般的Optional)
-- [?和!的用法](#?和!的用法)
-
-</description>
-      <pubDate>Tue, 12 Aug 2014 00:00:00 +0800</pubDate>
-      <dc:date>2014-08-12T00:00:00+08:00</dc:date>
-    </item>
-    <item>
-      <title>Objc 学习笔记</title>
-      <link>https://github.com/cuzv/Objc</link>
-      <description>**basic**
-- [一句话知识点](#一句话知识点)
-- [代码规范](#代码规范)
-    - [变量](#变量)
-	- [命名](#命名)
-	- [init与dealloc](#init与dealloc)
-	- [字面值](#字面值)
-	- [方法命名](#方法命名)
-- [引用计数](#引用计数)
-- [自动引用计数](#自动引用计数)
-	- [MRC总结](#MRC总结)
-	- [ARC的基本规则](#ARC的基本规则)
-	- [property的关键字类型](#property的关键字类型)
-	- [配置ARC和MRC混合使用](#配置ARC和MRC混合使用)
-	- [ARC使用基本规则](#ARC使用基本规则)
-	- [ARC严格遵守OC内存管理的基本原则](#ARC严格遵守OC内存管理的基本原则)
-- [cocoa内存管理规则](#cocoa内存管理规则)
-- [属性总结](#属性总结)
-- [class关键字](#class关键字)
-- [category](#category)
-- [protocol](#protocol)
-- [block](#block)
-- [appDelegate](#appDelegate)
-- [键盘弹出和收起](#键盘弹出和收起)
-- [检测网络状况](#检测网络状况)
-- [判断设备](#判断设备)
-
-</description>
-      <pubDate>Thu, 31 Jul 2014 00:00:00 +0800</pubDate>
-      <dc:date>2014-07-31T00:00:00+08:00</dc:date>
-    </item>
-    <item>
-      <title>linux(centos) Terminal Command 学习笔记</title>
-      <link>https://github.com/cuzv/linux-Terminal-Command</link>
-      <description>- [基本命令](#基本命令)
+- [基本命令](#基本命令)
     - [切换用户](#切换用户)
     - [关机](#关机)
     - [重启](#重启)
@@ -429,7 +308,7 @@ locate file 列出所有跟file相关的文件
 
 ```
 grep ftp /etc/services
-grep &quot;hello&quot; ./ -rn
+grep "hello" ./ -rn
 netstat -a | grep tftp
 ```
 
@@ -557,7 +436,7 @@ up、down
 ## 命令别名：alias
 
 - alias copy=cp
-- alias xrm=&quot;rm -r&quot;
+- alias xrm="rm -r"
 - 查看别名信息：alias
 - 删除别名信息：unalias copy
 
@@ -566,17 +445,17 @@ up、down
 - 0 (stdin)
 - 1(stdout)
 - 2(stderr)
-- \&gt; or &gt;&gt; 输出重定向
-- \&gt;    覆盖原文件
-- \&gt;&gt;   接着原文件写
-- ls -l /tmp &gt; /tmp.msg
-- date &gt;&gt; /tmp.msg
-- &lt; 输入重定向
-- wall &lt; /etc/motd
+- \> or >> 输出重定向
+- \>    覆盖原文件
+- \>>   接着原文件写
+- ls -l /tmp > /tmp.msg
+- date >> /tmp.msg
+- < 输入重定向
+- wall < /etc/motd
 
 ## 错误输出重定向
 
-`cp -R /usr/backup/usr.abk 2&gt; /bak.error`
+`cp -R /usr/backup/usr.abk 2> /bak.error`
 
 ## 管道
 
@@ -591,7 +470,7 @@ ls -l /etc | grep init | wc -l
 ## 命令连接符
 
 - ; 间隔命令按顺序执行
-- &amp;&amp; 前面true后面才执行，逻辑与
+- && 前面true后面才执行，逻辑与
 - ||  前面false后面才执行，逻辑或
 
 命令替换：将一个命令的输出作为另外一个命令的参数
@@ -761,7 +640,7 @@ pwunconv 将密码写回passwd文件
 
 md5sum(转换md5值) Ctrl-D结束
 
-`echo &quot;cnsu&quot; |  md5sum`
+`echo "cnsu" |  md5sum`
 
 ## 手动添加用户
 
@@ -918,7 +797,7 @@ chage 设定密码
 
 ## 批量添加用户
 
-1. newusers     导入用户信息文件    newusers &lt; addusrs.info
+1. newusers     导入用户信息文件    newusers < addusrs.info
 2. pwunconv 取消shadow passwd功能
 3. chpasswd 导入密码文件(格式：用户:密码)
 4. pwconv       将密码写入shadow文件
@@ -1001,7 +880,7 @@ renice 改变一个正在运行的进程优先级
 
 nohup:用户登出后任然执行，数据放在nohup.out
 
-*格式：nohup program &amp;*
+*格式：nohup program &*
 
 ## 进程挂起和恢复
 
@@ -1061,7 +940,7 @@ nohup:用户登出后任然执行，数据放在nohup.out
 2. 使用at命令：
 
     - `at -f at.script 9:00 12/22/13 or`
-    - `at &lt; at.script 9:00 12/22/13`
+    - `at < at.script 9:00 12/22/13`
 
 at 配置文件：
 
@@ -1081,15 +960,15 @@ crontab {-l|-r|-e}
 
 *minute hour day-of-month month-of-year day-of-wwwk  commands*
 
-1. 不能为空，不知道的用&quot;*&quot;
-2. 不连续用&quot;,&quot;，连续用&quot;-&quot;
+1. 不能为空，不知道的用"*"
+2. 不连续用","，连续用"-"
 3. 命令用绝对路径
 4. 用户必须具有运行命令和程序的权限
 
 例子：
 
 - `crontab -e`
-- `55 * * 1-5 /usr/bin/wall &lt; /etc/motd`
+- `55 * * 1-5 /usr/bin/wall < /etc/motd`
 - `0 18 * * 1-5 /sbin/init 5`
 - `0 0 1,15 * 1 /bin/cp -R /etc/backup/etc.0111`
 - `0 4 * * * *  每天凌晨四点`
@@ -1141,7 +1020,7 @@ crontab文件建立好以可以到/var/spool/cron目录确认
 
 ## 查看目录共多少文件
 
- `ls -l /bin | grep &quot;&quot; -c`
+ `ls -l /bin | grep "" -c`
 
  所得值-1(总计：xx占用一行)
 
@@ -1244,103 +1123,3 @@ eject
 添加年月日小时分钟
 
 `tar -zcf /backup/etc_$(date+%Y.%m.%d-%H%M).tar.gz /etc`
-
-
-</description>
-      <pubDate>Thu, 03 Jul 2014 00:00:00 +0800</pubDate>
-      <dc:date>2014-07-03T00:00:00+08:00</dc:date>
-    </item>
-    <item>
-      <title>正则表达式语句以及应用</title>
-      <link>https://github.com/cuzv/Regular-Expression-Note</link>
-      <description>- [字面值(literals)](#字面值)
-- [句点(dot)](#句点)
-- [字符类(character classes)](#字符类)
-- [字符类区间(ranges)](#字符类区间)
-- [字符类的否定(negation)](#字符类的否定)
-- [字符类补充](#字符类补充)
-- [乘法器(multipliers)](#乘法器)
-- [乘法器区间](#乘法器区间)
-- [乘法器补充](#乘法器补充)
-- [惰性(non-greed)](#惰性)
-- [分支(alternation)](#分支)
-- [组合(grouping)](#组合)
-- [单词边界(word boundaries)](#单词边界)
-- [行边界(line boundaries)](#行边界)
-- [文本边界(text boundaries)](#文本边界)
-- [捕获组](#捕获组)
-- [替换](#替换)
-- [后向引用(back-references)](#后向引用)
-- [一些建议](#一些建议)
-	- [输入验证](#输入验证)
-	- [支付卡号](#支付卡号)
-	- [名字](#名字)
-	- [邮件地址](#邮件地址)
-	- [标记](#标记)
-- [常用正则表达式](#常用正则表达式)
-	- [校验数字](#校验数字)
-	- [校验字符](#校验字符)
-	- [特殊需求](#特殊需求)
-
-</description>
-      <pubDate>Thu, 03 Jul 2014 00:00:00 +0800</pubDate>
-      <dc:date>2014-07-03T00:00:00+08:00</dc:date>
-    </item>
-    <item>
-      <title>Java 网络、正则、反射、类加载器</title>
-      <link>https://github.com/cuzv/Java-Net-Regular-Expression-Reflector-Class-Loader</link>
-      <description># 网络编程
-
-[1]: http://www.itheima.com
-[1]: http://img.blog.csdn.net/20131026094036265?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY3V6dmFs/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast
-[2]: http://img.blog.csdn.net/20131026171923437?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY3V6dmFs/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast</description>
-      <pubDate>Tue, 24 Sep 2013 00:00:00 +0800</pubDate>
-      <dc:date>2013-09-24T00:00:00+08:00</dc:date>
-    </item>
-    <item>
-      <title>Java IO</title>
-      <link>https://github.com/cuzv/Java-IO</link>
-      <description>字符流的由来：
-
-[1]: http://img.blog.csdn.net/20130729222107296?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY3V6dmFs/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast</description>
-      <pubDate>Thu, 25 Jul 2013 00:00:00 +0800</pubDate>
-      <dc:date>2013-07-25T00:00:00+08:00</dc:date>
-    </item>
-    <item>
-      <title>Java 集合框架</title>
-      <link>https://github.com/cuzv/Java-Collections</link>
-      <description>## collection、Iterator
-
-[1]: http://img.blog.csdn.net/20130715162956671?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY3V6dmFs/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center</description>
-      <pubDate>Sun, 14 Jul 2013 00:00:00 +0800</pubDate>
-      <dc:date>2013-07-14T00:00:00+08:00</dc:date>
-    </item>
-    <item>
-      <title>Java 基础笔记</title>
-      <link>https://github.com/cuzv/Java-Basic</link>
-      <description>- [if,else](#if,else)
-- [类和对象的关系](#类和对象的关系)
-- [成员变量和局部变量](#成员变量和局部变量)
-- [private](#private)
-- [构造函数](#构造函数)
-- [this](#this)
-- [静态的应用](#静态的应用)
-- [主函数](#主函数)
-- [单例](#单例)
-- [抽象](#抽象)
-- [继承](#继承)
-- [final](#final)
-- [抽象类和接口](#抽象类和接口)
-- [异常](#异常)
-- [内部类](#内部类)
-- [多态](#多态)
-- [多线程](#多线程)
-- [基本数据类型](#基本数据类型)
-
-</description>
-      <pubDate>Sat, 13 Jul 2013 00:00:00 +0800</pubDate>
-      <dc:date>2013-07-13T00:00:00+08:00</dc:date>
-    </item>
-    <dc:date>2014-11-07T00:00:00+08:00</dc:date>
-  </channel>
-</rss>
