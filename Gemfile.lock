@@ -112,12 +112,13 @@ GEM
     pygments.rb (0.6.3)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.2.0)
-    rake (10.1.1)
+    rake (10.5.0)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     rdiscount (2.1.7)
     redcarpet (3.3.2)
+    rouge (1.10.1)
     safe_yaml (1.0.4)
     sass (3.4.21)
     sawyer (0.6.0)
@@ -138,11 +139,12 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (~> 39)
-  jekyll (~> 2.4.0)
+  jekyll (~> 2.4)
   jekyll-post-unslugify
-  pygments.rb (~> 0.6.3)
-  rake (~> 10.1.1)
-  rdiscount (~> 2.1.7)
+  pygments.rb (~> 0.6)
+  rake (~> 10.1)
+  rdiscount (~> 2.1)
+  rouge (~> 1.10)
 
 BUNDLED WITH
    1.11.2

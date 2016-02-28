@@ -1337,7 +1337,7 @@ categories: 'moch'
   > - Two properties, both of which are allowed to be `nil`, have the potential to cause a strong reference cycle. This scenario is best resolved with a weak reference.
 
     One property that is allowed to be  `nil` and another property that cannot be `nil` have the potential to cause a strong reference cycle. This scenario is best resolved with an unowned reference.
-    
+
      There is a third scenario, in which both properties should always have a value, and neither property should ever be `nil` **once initialization is complete**. In this scenario, it is useful to combine an unowned property on one class with an implicitly unwrapped optional property on the other class.
 
 ``` Swift
@@ -1366,7 +1366,7 @@ categories: 'moch'
 ```
 
     To cope with this requirement, you declare the `capitalCity` property of `Country` as an *implicitly unwrapped optional property*, indicated by the exclamation mark at the end of its type annotation (`City!`). This means that the `capitalCity` property has a default value of `nil`
-    
+
     Because `capitalCity` has a default `nil` value, a new `Country` instance is considered fully initialized as soon as the `Country` instance sets its name property within its initializer. This means that the `Country` initializer can start to reference and pass around the implicit `self` property as soon as the name property is set. The `Country` initializer can therefore pass self as one of the parameters for the `City` initializer when the `Country` initializer is setting its own `capitalCity` property.
 
 - Note This by Moch
