@@ -3,7 +3,10 @@
 
 # Jekyll build
 /_site/
+_site
 .jekyll-metadata
+.sass-cache
+
 #Gemfile.lock
 
 # webstorm

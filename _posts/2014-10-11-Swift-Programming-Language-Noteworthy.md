@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Swift Programming Language Noteworthy
-tag: Swift
+tags: [Swift, iOS]
 categories: 'moch'
 ---
 
@@ -376,7 +376,7 @@ categories: 'moch'
   ```
 
   > If you provide an external parameter name for a parameter, that external name must always be used when you call the function.
-  ​
+  > ​
 - You can define a default value for any parameter as part of a function’s definition. If a default value is defined, you can omit that parameter when calling the function.
 
   > Place parameters with default values at the end of a function’s parameter list. This ensures that all calls to the function use the same order for their non-default arguments, and makes it clear that the same function is being called in each case.
@@ -416,12 +416,11 @@ categories: 'moch'
 
   >​
 
-
   > If your function has one or more parameters with a default value, and also has a variadic parameter, place the variadic parameter after all the defaulted parameters at the very end of the list.
-  ​
-- Function parameters are constants by default. Define variable parameters by prefixing the parameter name with the keyword `var`
+  >   ​
+  > - Function parameters are constants by default. Define variable parameters by prefixing the parameter name with the keyword `var`
 
-  ``` Swift
+``` Swift
   func alignRight(var string: String, count: Int, pad: Character) -> String {
       let amountToPad = count - countElements(string)
       if  amountToPad < 1 {
@@ -440,7 +439,7 @@ categories: 'moch'
   let paddedString = alignRight(originalString, 10, "-")
   // paddedString is equal to "-----hello"
   // originalString is still equal to "hello"
-  ```
+```
 
 - Variable parameters, as described above, can only be changed within the function itself. If you want a function to modify a parameter’s value, and you want those changes to persist after the function call has ended, define that parameter as an *in-out parameter* instead.
 
@@ -672,7 +671,7 @@ categories: 'moch'
   ```
 
   > If you assign a closure to a property of a class instance, and the closure captures that instance by referring to the instance or its members, you will create a strong reference cycle between the closure and the instance. Swift uses *capture lists* to break these strong reference cycles.
-  ​
+  > ​
 - Closures Are Reference Types
 
     In the example above, ` incrementBySeven` and `incrementByTen` are constants, but the closures these constants refer to are still able to increment the `runningTotal` variables that they have captured. This is because functions and closures are reference types.
@@ -933,7 +932,7 @@ categories: 'moch'
 - You don’t need to define property observers for non-overridden computed properties, because you can observe and respond to changes to their value from directly within the computed property’s setter.
 
   > `willSet` and `didSet` observers are not called when a property is first initialized. They are only called when the property’s value is set outside of an initialization context.
-  ​
+  > ​
 - Type Property
 
     Instance properties are properties that belong to an instance of a particular type. Every time you create a new instance of that type, it has its own set of property values, separate from any other instance.
@@ -1124,20 +1123,19 @@ categories: 'moch'
 - Any class that does not inherit from another class is known as a base class.
 
   > Swift classes do not inherit from a universal base class. Classes you define without specifying a superclass automatically become base classes for you to build upon.
-  ​
+  > ​
 - You can provide a custom getter (and setter, if appropriate) to override any inherited property, regardless of whether the inherited property is implemented as a stored or computed property at source.
 
     You can present an inherited read-only property as a read-write property by providing both a getter and a setter in your subclass property override. You cannot, however, present an inherited read-write property as a read-only property.
 
   > If you provide a setter as part of a property override, you must also provide a getter for that override. If you don’t want to modify the inherited property’s value within the overriding getter, you can simply pass through the inherited value by returning `super.someProperty` from the getter, where `someProperty` is the name of the property you are overriding
-  ​
+  > ​
 - You can use property overriding to add property observers to an inherited property. This enables you to be notified when the value of an inherited property changes, regardless of how that property was originally implemented.
 
   > You cannot add property observers to inherited constant stored properties or inherited read-only computed properties. The value of these properties cannot be set, and so it is not appropriate to provide a willSet or didSet implementation as part of an override.
 
 
   >​
-
 
   > Note also that you cannot provide both an overriding setter and an overriding property observer for the same property. If you want to observe changes to a property’s value, and you are already providing a custom setter for that property, you can simply observe any value changes from within the custom setter.
 
@@ -1326,7 +1324,7 @@ categories: 'moch'
     Use a weak reference whenever it is valid for that reference to become nil at some point during its lifetime. Conversely, use an unowned reference when you know that the reference will never be nil once it has been set during initialization.
 
   > Weak references must be declared as variables, to indicate that their value can change at runtime. A weak reference cannot be declared as a constant.
-  ​
+  > ​
 - Like weak references, an *unowned reference* does not keep a strong hold on the instance it refers to. Unlike a weak reference, however, an unowned reference is assumed to *always* have a value. Because of this, an unowned reference is always defined as a non-optional type. You indicate an unowned reference by placing the `unowned` keyword before a property or variable declaration.
 
   > If you try to access an unowned reference after the instance that it references is deallocated, you will trigger a runtime error. Use unowned references only when you are sure that the reference will always refer to an instance.
@@ -1334,16 +1332,15 @@ categories: 'moch'
 
   >​
 
-
   > Note also that Swift guarantees your app will crash if you try to access an unowned reference after the instance it references is deallocated. You will never encounter unexpected behavior in this situation. Your app will always crash reliably, although you should, of course, prevent it from doing so.
-  ​
-- Two properties, both of which are allowed to be `nil`, have the potential to cause a strong reference cycle. This scenario is best resolved with a weak reference.
+  >   ​
+  > - Two properties, both of which are allowed to be `nil`, have the potential to cause a strong reference cycle. This scenario is best resolved with a weak reference.
 
     One property that is allowed to be  `nil` and another property that cannot be `nil` have the potential to cause a strong reference cycle. This scenario is best resolved with an unowned reference.
-
+    
      There is a third scenario, in which both properties should always have a value, and neither property should ever be `nil` **once initialization is complete**. In this scenario, it is useful to combine an unowned property on one class with an implicitly unwrapped optional property on the other class.
 
-  ``` Swift
+``` Swift
   class Country {
       let name: String
       let capitalCity: City!
@@ -1366,10 +1363,10 @@ categories: 'moch'
 
   var country = Country(name: "Canada", capitalName: "Ottawa")
   println("\(country.name)'s capital city is called \(country.capitalCity.name)")
-  ```
+```
 
     To cope with this requirement, you declare the `capitalCity` property of `Country` as an *implicitly unwrapped optional property*, indicated by the exclamation mark at the end of its type annotation (`City!`). This means that the `capitalCity` property has a default value of `nil`
-
+    
     Because `capitalCity` has a default `nil` value, a new `Country` instance is considered fully initialized as soon as the `Country` instance sets its name property within its initializer. This means that the `Country` initializer can start to reference and pass around the implicit `self` property as soon as the name property is set. The `Country` initializer can therefore pass self as one of the parameters for the `City` initializer when the `Country` initializer is setting its own `capitalCity` property.
 
 - Note This by Moch
@@ -1522,7 +1519,7 @@ categories: 'moch'
 - Extensions can add new convenience initializers to a class, but they cannot add new designated initializers or deinitializers to a class. Designated initializers and deinitializers must always be provided by the original class implementation.
 
   > If you use an extension to add an initializer to a value type that provides default values for all of its stored properties and does not define any custom initializers, you can call the default initializer and memberwise initializer for that value type from within your extension’s initializer.
-  ​
+  > ​
 - Instance methods added with an extension can also modify (or `mutate`) the instance itself. Structure and enumeration methods that modify `self` or its properties must mark the instance method as mutating, just like mutating methods from an original implementation.
 
 ## Protocols
@@ -1591,7 +1588,6 @@ categories: 'moch'
 
 
   >​
-
 
   > Note also that `@objc` protocols can be adopted only by classes, and not by structures or enumerations. If you mark your protocol as `@objc` in order to specify optional requirements, you will only be able to apply that protocol to class types.
 
