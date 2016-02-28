@@ -1,8 +1,36 @@
 # Jykell configuration
-markdown: redcarpet
-highlighter: pygments
+date_format: "%b %-d, %Y"
 paginate: 5
-language: 'en-uk'
+language: 'zh-cn'
+encoding: "utf-8"
+
+# You are attempting to use the 'pygments' highlighter, which is currently unsupported on GitHub Pages.
+# Your site will use 'rouge' for highlighting instead.
+# To suppress this warning, change the 'highlighter' value to 'rouge' in your '_config.yml'. For more information,
+# see https://help.github.com/articles/page-build-failed-config-file-error/#fixing-highlighting-errors.
+# highlighter: pygments
+highlighter: rouge
+
+# You are currently using the 'redcarpet' Markdown engine, which will not be supported on GitHub Pages after May 1st.
+# At that time, your site will use 'kramdown' for markdown rendering instead.
+# To suppress this warning, remove the 'markdown' setting in your site's '_config.yml' file and confirm your site renders as expected.
+# For more information, see https://help.github.com/articles/updating-your-markdown-processor-to-kramdown.
+# markdown: redcarpet # [ maruku | rdiscount | kramdown | redcarpet ]
+# redcarpet:
+#     extensions:
+#         - fenced_code_blocks
+#         - no_intra_emphasis
+#         - strikethrough
+#         - space_after_headers
+#         - autolink
+#         - hard_wrap
+#         - tables
+#         - superscript
+#         - highlight
+#         - prettify
+#         - with_toc_data
+markdown: rdiscount  # [ maruku | rdiscount | kramdown | redcarpet ]
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 # Website info
 name: 'Valar morghulis'
@@ -18,7 +46,6 @@ url: 'https://github.com/cuzv'
 short_url: 'cuzv'
 image: 'assets/images/avatar.png'
 
-# google_analytics: UA-69281367-1
 disqus: username
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
 baseurl: /
@@ -27,7 +54,6 @@ baseurl: /
 permalink: /:title
 # permalink: /author/:username
 # permalink: /tag/:tag
-
 
 # gems and other configs
 gems: [jekyll-paginate]
@@ -71,3 +97,8 @@ exclude:
   - "*.Rmd"
   - vendor
   - .travis.yml
+
+# Google Analytics
+ga:
+  id:
+  host:
