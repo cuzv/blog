@@ -3,7 +3,6 @@ layout: post
 title: The Swift Programming Language Noteworthy
 tags: [Swift, iOS]
 categories: 'moch'
-subclass: 'post post-content'
 ---
 
 - [The Basics](#the-basics)
@@ -414,8 +413,8 @@ subclass: 'post post-content'
 
   > A function may have at most one variadic parameter, and it must always appear last in the parameter list, to avoid ambiguity when calling the function with multiple parameters.
 
-  >​
 
+  >​
 
   > If your function has one or more parameters with a default value, and also has a variadic parameter, place the variadic parameter after all the defaulted parameters at the very end of the list.
   >   ​
@@ -1135,8 +1134,8 @@ subclass: 'post post-content'
 
   > You cannot add property observers to inherited constant stored properties or inherited read-only computed properties. The value of these properties cannot be set, and so it is not appropriate to provide a willSet or didSet implementation as part of an override.
 
-  >​
 
+  >​
 
   > Note also that you cannot provide both an overriding setter and an overriding property observer for the same property. If you want to observe changes to a property’s value, and you are already providing a custom setter for that property, you can simply observe any value changes from within the custom setter.
 
@@ -1330,8 +1329,8 @@ subclass: 'post post-content'
 
   > If you try to access an unowned reference after the instance that it references is deallocated, you will trigger a runtime error. Use unowned references only when you are sure that the reference will always refer to an instance.
 
-  >​
 
+  >​
 
   > Note also that Swift guarantees your app will crash if you try to access an unowned reference after the instance it references is deallocated. You will never encounter unexpected behavior in this situation. Your app will always crash reliably, although you should, of course, prevent it from doing so.
   >   ​
@@ -1587,8 +1586,8 @@ subclass: 'post post-content'
 
   > Optional protocol requirements can only be specified if your protocol is marked with the `@objc` attribute. Even if you are not interoperating with Objective-C, you need to mark your protocols with the `@objc` attribute if you want to specify optional requirements.
 
-  >​
 
+  >​
 
   > Note also that `@objc` protocols can be adopted only by classes, and not by structures or enumerations. If you mark your protocol as `@objc` in order to specify optional requirements, you will only be able to apply that protocol to class types.
 
