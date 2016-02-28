@@ -3,6 +3,7 @@ layout: post
 title: The Swift Programming Language Noteworthy
 tags: [Swift, iOS]
 categories: 'moch'
+subclass: 'post post-content'
 ---
 
 - [The Basics](#the-basics)
@@ -413,8 +414,8 @@ categories: 'moch'
 
   > A function may have at most one variadic parameter, and it must always appear last in the parameter list, to avoid ambiguity when calling the function with multiple parameters.
 
-
   >​
+
 
   > If your function has one or more parameters with a default value, and also has a variadic parameter, place the variadic parameter after all the defaulted parameters at the very end of the list.
   >   ​
@@ -1134,8 +1135,8 @@ categories: 'moch'
 
   > You cannot add property observers to inherited constant stored properties or inherited read-only computed properties. The value of these properties cannot be set, and so it is not appropriate to provide a willSet or didSet implementation as part of an override.
 
-
   >​
+
 
   > Note also that you cannot provide both an overriding setter and an overriding property observer for the same property. If you want to observe changes to a property’s value, and you are already providing a custom setter for that property, you can simply observe any value changes from within the custom setter.
 
@@ -1329,15 +1330,15 @@ categories: 'moch'
 
   > If you try to access an unowned reference after the instance that it references is deallocated, you will trigger a runtime error. Use unowned references only when you are sure that the reference will always refer to an instance.
 
-
   >​
+
 
   > Note also that Swift guarantees your app will crash if you try to access an unowned reference after the instance it references is deallocated. You will never encounter unexpected behavior in this situation. Your app will always crash reliably, although you should, of course, prevent it from doing so.
   >   ​
   > - Two properties, both of which are allowed to be `nil`, have the potential to cause a strong reference cycle. This scenario is best resolved with a weak reference.
 
     One property that is allowed to be  `nil` and another property that cannot be `nil` have the potential to cause a strong reference cycle. This scenario is best resolved with an unowned reference.
-
+    
      There is a third scenario, in which both properties should always have a value, and neither property should ever be `nil` **once initialization is complete**. In this scenario, it is useful to combine an unowned property on one class with an implicitly unwrapped optional property on the other class.
 
 ``` Swift
@@ -1366,7 +1367,7 @@ categories: 'moch'
 ```
 
     To cope with this requirement, you declare the `capitalCity` property of `Country` as an *implicitly unwrapped optional property*, indicated by the exclamation mark at the end of its type annotation (`City!`). This means that the `capitalCity` property has a default value of `nil`
-
+    
     Because `capitalCity` has a default `nil` value, a new `Country` instance is considered fully initialized as soon as the `Country` instance sets its name property within its initializer. This means that the `Country` initializer can start to reference and pass around the implicit `self` property as soon as the name property is set. The `Country` initializer can therefore pass self as one of the parameters for the `City` initializer when the `Country` initializer is setting its own `capitalCity` property.
 
 - Note This by Moch
@@ -1586,8 +1587,8 @@ categories: 'moch'
 
   > Optional protocol requirements can only be specified if your protocol is marked with the `@objc` attribute. Even if you are not interoperating with Objective-C, you need to mark your protocols with the `@objc` attribute if you want to specify optional requirements.
 
-
   >​
+
 
   > Note also that `@objc` protocols can be adopted only by classes, and not by structures or enumerations. If you mark your protocol as `@objc` in order to specify optional requirements, you will only be able to apply that protocol to class types.
 
